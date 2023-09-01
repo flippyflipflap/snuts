@@ -17,7 +17,7 @@ $o=New-Object -ComObject WScript.Shell
 #############################################################################################################################################
 
 #GetIt!
-irm -Uri 'https://github.com/flippyflipflap/snuts/raw/main/ADV-RR/rr.mp4' -O "rr.mp4"
+irm -Uri 'https://github.com/flippyflipflap/snuts/raw/main/ADV-RR/rr.mp4' -O "$env:TMP\rr.mp4"
 
 
 #WPF Library for Playing Movie and some components
